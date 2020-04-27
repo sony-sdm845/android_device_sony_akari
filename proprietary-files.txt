@@ -30,6 +30,55 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/lib64/libacdbloader.so
 vendor/lib/libacdbloader.so
 
+# Audio
+vendor/lib/hw/audio.primary.sdm845.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+vendor/lib/libcsd-client.so
+vendor/lib64/hw/audio.primary.sdm845.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libcsd-client.so
+
+# Audio extensions
+vendor/lib/liba2dpoffload.so
+vendor/lib/libbatterylistener.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libhfp.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
+vendor/lib64/liba2dpoffload.so
+vendor/lib64/libbatterylistener.so
+vendor/lib64/libhdmipassthru.so
+vendor/lib64/libhfp.so
+vendor/lib64/libsndmonitor.so
+vendor/lib64/libspkrprot.so
+
+# Audio FX modules
+vendor/etc/sony_effect/clearphase_sp_param.bin
+vendor/etc/sony_effect/effect_params.data
+vendor/etc/sony_effect/sforce_param_arm.bin
+vendor/etc/sony_effect/sforce_param_qdsp.bin
+vendor/etc/sony_effect/xloud_param_arm.bin
+vendor/etc/sony_effect/xloud_param_qdsp.bin
+vendor/etc/sony_effect/znr_param_44k_MainCam.tbl
+vendor/etc/sony_effect/znr_param_44k_MainSubSemCam.tbl
+vendor/etc/sony_effect/znr_param_44k_MainSubSoiCam.tbl
+vendor/etc/sony_effect/znr_param_44k_NoCam.tbl
+vendor/etc/sony_effect/znr_param_44k_SubSemCam.tbl
+vendor/etc/sony_effect/znr_param_44k_SubSoiCam.tbl
+vendor/etc/sony_effect/znr_param_48k_MainCam.tbl
+vendor/etc/sony_effect/znr_param_48k_MainSubSemCam.tbl
+vendor/etc/sony_effect/znr_param_48k_MainSubSoiCam.tbl
+vendor/etc/sony_effect/znr_param_48k_NoCam.tbl
+vendor/etc/sony_effect/znr_param_48k_SubSemCam.tbl
+vendor/etc/sony_effect/znr_param_48k_SubSoiCam.tbl
+vendor/lib/soundfx/libsonypostprocbundle.so
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
@@ -37,6 +86,9 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/libbtnv.so
+
+# Charger
+vendor/bin/chargemon
 
 # Camera
 vendor/bin/hw/vendor.somc.hardware.camera.provider@1.0-service
@@ -542,6 +594,13 @@ vendor/lib/libscvePanorama_lite.so
 vendor/lib/libscvePanorama.so
 vendor/lib/libscveScan3D.so
 
+# DRM
+vendor/bin/qseecomd
+
+# Display (SDM)
+vendor/lib/libsdedrm.so
+vendor/lib64/libsdedrm.so
+
 # Display calibration
 vendor/etc/qdcm_calib_data_3.xml
 vendor/etc/qdcm_calib_data_7.xml
@@ -568,6 +627,9 @@ vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
+# Fingerprint
+vendor/bin/hw/fpc_fingerprint@2.1_HIDL-service
+
 # Fingerprint firmware
 vendor/firmware/fpctzfingerprint.b00
 vendor/firmware/fpctzfingerprint.b01
@@ -578,6 +640,14 @@ vendor/firmware/fpctzfingerprint.b05
 vendor/firmware/fpctzfingerprint.b06
 vendor/firmware/fpctzfingerprint.b07
 vendor/firmware/fpctzfingerprint.mdt
+
+# Graphics (Adreno firmware)
+vendor/firmware/a630_gmu.bin
+vendor/firmware/a630_sqe.fw
+vendor/firmware/a630_zap.b00
+vendor/firmware/a630_zap.b01
+vendor/firmware/a630_zap.b02
+vendor/firmware/a630_zap.mdt
 
 # GNSS
 -vendor/app/CACertService/CACertService.apk
@@ -666,9 +736,34 @@ vendor/lib/vendor.qti.hardware.cacert@1.0.so
 -system/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk;PRESIGNED
 -system/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk;PRESIGNED
 
+# Illumination service
+vendor/bin/hw/illumination_service
+
 # Init
 vendor/etc/init/init.sony.usb.eng.rc
 vendor/etc/init/init.sony.usb.rc
+
+# IMS
+product/lib/lib-imsvideocodec.so
+product/lib/libdiag_system.so
+product/lib64/lib-imsvideocodec.so
+product/lib64/libdiag_system.so
+
+# IDD
+vendor/bin/idd-logreader
+
+# IPA
+vendor/bin/ipacm-diag
+vendor/etc/init/ipa_fws.rc
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.mdt
+
+# Key provision daemon
+vendor/bin/keyprovd
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
@@ -684,9 +779,148 @@ vendor/lib/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterprovision.so
 vendor/lib/libkeymasterutils.so
 
+# Listen
+vendor/lib/hw/sound_trigger.primary.sdm845.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs.so
+vendor/lib/liblistenjni.so
+vendor/lib64/hw/sound_trigger.primary.sdm845.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs.so
+vendor/lib64/liblistenjni.so
+
+# Media
+vendor/lib/libOmxVpp.so
+system/lib/libOmxMux.so
+vendor/lib/libpfter.so
+vendor/lib/libvppclient.so
+vendor/lib/libvpplibrary.so
+vendor/lib64/libOmxVpp.so
+vendor/lib64/libpfter.so
+vendor/lib64/libvppclient.so
+vendor/lib64/libvpplibrary.so
+
+# Media codecs
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAlacDec.so
+vendor/lib/libOmxAmrDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxApeDec.so
+vendor/lib/libOmxG711Dec.so
+vendor/lib/libOmxMux_proprietary.so
+vendor/lib/libOmxSwVdec.so
+vendor/lib/libOmxSwVencMpeg4.so
+vendor/lib/libOmxWmaDec.so
+vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxAlacDec.so
+vendor/lib64/libOmxAmrDec.so
+vendor/lib64/libOmxAmrwbplusDec.so
+vendor/lib64/libOmxApeDec.so
+vendor/lib64/libOmxG711Dec.so
+vendor/lib64/libOmxSwVdec.so
+vendor/lib64/libOmxSwVencMpeg4.so
+vendor/lib64/libOmxWmaDec.so
+
+# NFC
+vendor/lib/nfc_nci_nxp.so
+
+# Privapp permissions
+system/etc/permissions/privapp-permissions-sony.xml
+
+# Perf
+vendor/lib/libperfconfig.so
+vendor/lib64/libperfconfig.so
+
+# QMI
+vendor/bin/mlog_qmi_service
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqcmaputils.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmiservices.so
+vendor/lib64/libdiag.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libqcci_legacy.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/libqmi.so
+vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_client_helper.so
+vendor/lib64/libqmi_client_qmux.so
+vendor/lib64/libqmi_csi.so
+vendor/lib64/libqmiservices.so
+
+# RIL
+vendor/bin/ATFWD-daemon
+vendor/bin/adpl
+vendor/bin/hw/qcrild
+vendor/bin/netmgrd
+vendor/bin/pd-mapper
+vendor/bin/port-bridge
+vendor/bin/qti
+vendor/bin/rmt_storage
+vendor/lib/libconfigdb.so
+vendor/lib/liblqe.so
+vendor/lib/libmdmdetect.so
+vendor/lib/libnetmgr.so
+vendor/lib/libnetmgr_common.so
+vendor/lib/libpdmapper.so
+vendor/lib/libpdnotifier.so
+vendor/lib/libqcrilFramework.so
+vendor/lib/libril-qc-hal-qmi.so
+vendor/lib/libril-qc-ltedirectdisc.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
+vendor/lib64/libconfigdb.so
+vendor/lib64/liblqe.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
+vendor/lib64/libqcrilFramework.so
+vendor/lib64/libril-qc-hal-qmi.so
+vendor/lib64/libril-qc-ltedirectdisc.so
+vendor/lib64/libril-qc-qmi-1.so
+vendor/lib64/libril-qc-radioconfig.so
+vendor/lib64/librilqmiservices.so
+vendor/lib64/libsettings.so
+
+# SCT
+vendor/bin/sct_service
+
+# SSR
+vendor/bin/ssr_setup
+vendor/bin/subsystem_ramdump
+
 # Sensors
-vendor/lib64/sensors.ssc.so
+vendor/bin/sensors.qti
+vendor/bin/sscrpcd
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib/libsensorcal.so
+vendor/lib/libsnsapi.so
+vendor/lib/libsnsdiaglog.so
+vendor/lib/libssc.so
 vendor/lib/sensors.ssc.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libsensorcal.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libssc.so
+vendor/lib64/sensors.ssc.so
 
 # Sensor configs
 vendor/etc/sensors/hals.conf
@@ -739,6 +973,17 @@ vendor/etc/sensors/registry/somc/sdm845_lsm6dsm_0_gyro_miscta.json
 vendor/etc/sensors/registry/somc/tmd2725_prox_miscta.json
 vendor/etc/sensors/sns_reg_config
 
+# TA QMI
+vendor/bin/ta_qmi_service
+
+# Thermal engine
+vendor/bin/thermal-engine
+vendor/etc/change.cfg
+vendor/etc/thermal-engine.conf
+
+# Time services
+vendor/bin/time_daemon
+
 # Thermal configs
 vendor/etc/thermal-engine.conf
 
@@ -752,3 +997,37 @@ vendor/firmware/touch_module_id_0x21.img
 
 # WiFi
 vendor/etc/wifi/bdwlan.bin
+vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
+
+# WiFi Display
+system/lib/libwfdcommonutils.so
+system/lib/libwfdconfigutils.so
+system/lib/libwfdmmsink.so
+system/lib/libwfdmmsrc_system.so
+system/lib/libwfdservice.so
+system/lib/libwfdsinksm.so
+system/lib/libwfdsm.so
+system/lib64/libwfdcommonutils.so
+system/lib64/libwfdconfigutils.so
+system/lib64/libwfdmmsink.so
+system/lib64/libwfdsinksm.so
+system/lib64/libwfdsm.so
+vendor/lib/libwfdcodecv4l2_proprietary.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdconfigutils_proprietary.so
+vendor/lib/libwfdmmsrc_proprietary.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib/libwfdsessionmodule.so
+vendor/lib/libwfdsm_proprietary.so
+vendor/lib/libwfdsourcesm_proprietary.so
+
+# Widevine DRM
+vendor/lib/libhdcprx_module.so
+vendor/lib/libhdcptx_module.so
+vendor/lib/liboemcrypto.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/libhdcprx_module.so
+vendor/lib64/libhdcptx_module.so
+vendor/lib64/liboemcrypto.so
+vendor/lib64/mediadrm/libwvdrmengine.so
