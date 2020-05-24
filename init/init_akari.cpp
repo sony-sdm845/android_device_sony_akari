@@ -84,26 +84,36 @@ void target_load_properties() {
     set_ro_product_prop(source, "model", model);
   }
 
-  if (model == "H8324") {
-    property_set("persist.multisim.config", "dsds");
+  if (model == "H8266") {
+    property_set("persist.vendor.radio.multisim.config", "dsds");
     property_set("persist.radio.multisim.config", "dsds");
-    property_set("ro.telephony.default_network", "9,1");
+    property_set("ro.telephony.default_network", "22,22");
     property_override(
         "ro.build.description",
-        "H8324-user 10 52.1.A.0.672 052001A000067202006556692 release-keys");
+        "H8266-user 10 52.1.A.0.672 052001A000067202006556692 release-keys");
     for (const auto &source : ro_props_default_source_order) {
       set_ro_build_prop(source, "fingerprint",
-                        "Sony/H8324/H8324:10/52.1.A.0.672/"
+                        "Sony/H8266/H8266:10/52.1.A.0.672/"
                         "052001A000067202006556692:user/release-keys");
     }
-  } else if (model == "H8314") {
+  } else if (model == "H8276") {
     property_set("ro.telephony.default_network", "9");
     property_override(
         "ro.build.description",
-        "H8314-user 10 52.1.A.0.672 052001A000067202006556692 release-keys");
+        "H8276-user 10 52.1.A.0.672 052001A000067202006556692 release-keys");
     for (const auto &source : ro_props_default_source_order) {
       set_ro_build_prop(source, "fingerprint",
-                        "Sony/H8324/H8324:10/52.1.A.0.672/"
+                        "Sony/H8276/H8276:10/52.1.A.0.672/"
+                        "052001A000067202006556692:user/release-keys");
+    }
+  } else if (model == "H8216") {
+    property_set("ro.telephony.default_network", "9");
+    property_override(
+        "ro.build.description",
+        "H8216-user 10 52.1.A.0.672 052001A000067202006556692 release-keys");
+    for (const auto &source : ro_props_default_source_order) {
+      set_ro_build_prop(source, "fingerprint",
+                        "Sony/H8216/H8216:10/52.1.A.0.672/"
                         "052001A000067202006556692:user/release-keys");
     }
   }
